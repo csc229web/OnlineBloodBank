@@ -58,9 +58,11 @@ h6 {
     font-size: .75em;
 }
 p {
-   line-height: 1.8em 
+    font-size:1em;
+    line-height: 1.8em;
 }
 ul, ol, dl {
+    line-height: 1.35em;
     
 }
 a {
