@@ -6,49 +6,59 @@
     <meta charset="UTF-8">
     <title>Online Blood Bank - Donor Register</title>
     <meta name="author" content="Lynn kermode & Joshua Connor">
-    <link rel="stylesheet" type="text/css" href="style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
-<body>
-    <div class="home default">
+<body class="donor">
+    <div class="wrapper_default">
         <header>
-            <h1>New Donor Registration</h1>
+
+            <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>
 
         </header>
         <section>
             <article>
+                <h2>New Donor Registration</h2>
                 <form action="" method="post">
+
                     <fieldset>
-                        <legend style="color:red;"><strong>EXISTING DONOR LOG IN</strong></legend><br>
-                        <!--<label form="form-pswd">Donor user ID:</label>
-<input type="password" name="pswd" maxlength="8" id="form-pswd">-->
-
-                        <label> User Name <input type="text" name="d_userName" id="form-d_userName"maxlength="20">
-	</label>
-                        <label for="form-pswd">Password:</label>
-                        <input type="password" name="pswd" maxlength="8" id="form-pswd">
-                        <br><br>
-                        <fieldset>
-                            <legend style="color:blue;"><strong>NEW DONOR REGISTRATION</strong></legend>
-                            <p>Create a user name and password to register and receive a secure ID.
-                            </p>
-
-                            <label>User Name <input type="text" name="d_userName" id="form-d_userName"maxlength="20">Password</label>
+                        <legend>New Donor Login</legend>
+                        <p><em>Create a user name and password to register and receive a secure ID.</em></p>
+                        <div>
+                            <label>User Name</label>
+                            <input type="text" name="d_userName" id="form-d_userName" maxlength="20">
+                        </div>
+                        <div>
+                            <label>Password</label>
                             <input type="password" name="pswd" maxlength="8" id="form-pswd">
-                            <br><br>
-                            <label>First Name <input type="text" name="d_fName" id="form-d_fName" maxlength="15">
-	</label>
-                            <label>Last Name <input type="text" name="d_lName" id="form-d_lName" maxlength="20">
-	</label><br>
-                            <label>Street Address <input type="text" name="d_stAdress" id="form-d_stAddress"
-    maxlength="50">
-	</label>
-                            <label>City<input type="text" name="d_city" id="form-d_city" maxlength="50">
-	</label>
-                            <p>State
-                                <select name="State">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>New Donor Contact</legend>
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" name="d_fName" id="form-d_fName" maxlength="15">
+
+                        </div>
+                        <div>
+                            <label>Last Name </label>
+                            <input type="text" name="d_lName" id="form-d_lName" maxlength="20">
+                        </div>
+                        <div>
+                            <label>Street Address</label>
+                            <input type="text" name="d_stAdress" id="form-d_stAddress" maxlength="50">
+
+                        </div>
+                        <div>
+                            <label>City</label><input type="text" name="d_city" id="form-d_city" maxlength="50">
+                        </div>
+                        <div>
+                            <label>State</label>
+                            <select name="State">
 	<option value="AL">AL</option>
 	<option value="AK">AK</option>
 	<option value="AR">AR</option>	
@@ -101,11 +111,13 @@
 	<option value="WV">WV</option>
 	<option value="WY">WY</option>
     </select>
-
-                                <label>Postal Code<input type="text" name="d_postcode" id="form-d_postcode" maxlength="10">
-                </label></p>
-                            <p>Country
-                                <select>
+                        </div>
+                        <div>
+                            <label>Postal Code</label><input type="text" name="d_postcode" id="form-d_postcode" maxlength="10">
+                        </div>
+                        <div>
+                            <label>Country</label>
+                            <select>
     <option value="United States" title="United States">United States</option>           
 	<option value="Afghanistan" title="Afghanistan">Afghanistan</option>
 	<option value="Åland Islands" title="Åland Islands">Åland Islands</option>
@@ -357,36 +369,39 @@
 	<option value="Zambia" title="Zambia">Zambia</option>
 	<option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
   </select>
-                            </p>
+                        </div>
+                        <div>
 
-                            <label>Email: <input type="text" name="email"></label><br>
-                            <label>Telephone: <input type="text" name="Tel"></label><br>
-                            <label>Age: &nbsp &nbsp<input type="number" min="17" name="age"> &nbsp You have to be at least 17 years old to donate blood.</label>
-                            <br>
-                            <p>Sex
-                                <Select>
+                            <label>Email: </label><input type="email" name="email"></div>
+                        <div>
+                            <label>Telephone: </label><input type="tel" name="Tel">
+                        </div>
+                        <div>
+                            <label>Birthdate:</label><input type="date" min="17" name="age"></div>
+                        <p><em>You have to be at least 17 years old to donate blood.</em></p>
+                        <div>
+                            <label>Sex: </label>
+                            <select>
                 <option value="male">male</option>
                 <option value="female">female</option>
-                </Select>
-                            </p>
-                            <label>Height: <input type="number" name="height"></label><br>
-                            <label>Weight: <input type="number" name="weight"></label><br>
-                            <label>Last donation date:<input type="date" name="name" value="2004-01-14"></label><br>
+                </select>
+                        </div>
+                        <div><label>Height: </label><input type="number" name="height"></div>
+                        <div><label>Weight: </label><input type="number" name="weight"></div>
+                        <div><label>Last donation date:</label><input type="date" name="name"></div>
 
-                            <!--
-                <p>Blood donor type
-                    <Select>
+                        <div><label>What are you willing to donate?</label>
+                            <select>
                 <option value="Whole">Whole</option>
                 <option value="Power Red">Power Red</option>
                 <option value="Platelets">Platelets</option>
                 <option value="Plasma ">Plasma </option>
                 <option value="Autologous">Autologous</option>
                 <option value="Directed">Directed</option>
-            </Select>
-                </p>
-                -->
-                            <p>Blood type
-                                <Select>
+                                   </select></div>
+                        <div>
+                            <label>Your blood type:</label>
+                            <select>
                 <option value="A positive">A positive</option>
                 <option value="A negative">A negative</option>
                 <option value="B positive">B positive</option>
@@ -395,12 +410,21 @@
                 <option value="O negative">O negative</option>
                 <option value="AB positive">AB positive</option>
                 <option value="AB negative">AB negative</option>
+<<<<<<< HEAD
+            </select></div>
+
+=======
             </Select>
                             </p>
                         </fieldset>
                         <!--Submit and Reset Button-->
                         <p><input type="submit" value="Submit"></p>
+>>>>>>> master
                     </fieldset>
+                    <div class="form_group_action">
+                        <button type="submit">Submit</button>
+                    </div>
+
                 </form>
             </article>
         </section>
