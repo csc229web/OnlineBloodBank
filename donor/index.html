@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="UTF-8">
     <title>Online Blood Bank - Donor Login</title>
     <meta name="author" content="Lynn kermode & Joshua Connor">
-    <link rel="stylesheet" type="text/css" href="style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
-<body>
-    <div class="home default">
-    <header>
-        <h1>Donor Login</h1>
-        
-    </header>
-    <section>
-        <article>
 
-        </article>
-    </section>
+<body class="donor">
+    <div class="wrapper_default">
+        <header>
+
+            <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>
+
+        </header>
+        <section>
+            <article>
+                <form>
+                    <fieldset>
+                        <legend>Donor:</legend>
+                        <div>
+                            <label for="user">User: </label>
+                            <input type="text" name="user" id="user">
+                        </div>
+                        <div>
+                            <label for="pass">Pass: </label>
+                            <input type="password" name="password" id="pass">
+                        </div>
+                    </fieldset>
+                    <div class="form_group_action">
+                        <button type="submit">Sign In</button>
+                    </div>
+                </form>
+                <div class="signin-options">
+                    <a href="register.html">New User Registeration</a>
+                    <a href="#">Forgot Password</a>
+                </div>
+            </article>
+        </section>
     </div>
-    
+    <footer class="sticky">
+    <div class="footer_column">
+    <div class="copyright">
+        <p>Copyright &copy; 2017, Online Blood Bank</p>    
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>    
+    </nav>
+            </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 
