@@ -70,6 +70,32 @@ h1 a:hover {
     text-shadow: 0 2px 3px rgba(22,22,22,0.75);
     transition: 0.75s;
 }
+h1 a:hover i{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+/* keyframes for animation of blood drop */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
 h2 {
     font-size: 2.5em;
 }
