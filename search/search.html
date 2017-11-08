@@ -1,27 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <meta charset="UTF-8">
-    <title>Online Blood Bank - Donor Search</title>
+    <title>Online Blood Bank - Search For Blood Donors</title>
     <meta name="author" content="Lynn kermode & Joshua Connor">
-    <link rel="stylesheet" type="text/css" href="style/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
 
-<body>
-    <div class="search default">
-    <header>
-        <h1>Donor Search</h1>
-        
-    </header>
-    <section>
-        <article>
-        </article>
-    </section>
+
+<body class="donor">
+    <div class="wrapper_default">
+        <header>
+
+            <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>
+
+        </header>
+        <section>
+            <article>
+                <h2>Search For Blood Donors</h2>
+                <form>
+                    <fieldset>
+                        <legend>Search</legend>
+                        <div>
+                            <lable for="search_blood_type">Blood type</lable>
+                            <select name="search_blood_type" id="search_blood_type">
+                                <option value="A positive">A positive</option>
+                                <option value="A negative">A negative</option>
+                                <option value="B positive">B positive</option>
+                                <option value="B negative">B negative </option>
+                                <option value="O positive">O positive</option>
+                                <option value="O negative">O negative</option>
+                                <option value="AB positive">AB positive</option>
+                                <option value="AB negative">AB negative</option>
+                            </select>
+                        </div>
+                        <div>
+                            <lable>Location (Postal Code)</lable>
+                            <input type="number" name="search_tel" id="search_tel" >
+                        </div>
+                    </fieldset>
+                    <div class="form_group_action">
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+                
+                <form>
+                <fieldset>
+                        <legend>Didn't find what you needed? </legend>
+                        <p>We will notify you when your blood type becomes available in your area.<br> 
+                            Please provide the following information.</p>
+
+                        <ol>
+                            <li><label for="firstlast">Name:</label>
+                                <input type="text" name="username" id="firstlast"></li>
+                            <li><label for="email">Email:</label>
+                                <input type="text" name="email" id="email"></li>
+                        </ol>
+                        
+                    </fieldset>
+                    <div class="form_group_action">
+                        <button type="submit">Request</button>
+                    </div>
+                </form>
+            </article>
+        </section>
     </div>
-    
+    <footer class="sticky">
+    <div class="footer_column">
+    <div class="copyright">
+        <p>Copyright &copy; 2017, Online Blood Bank</p>    
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>    
+    </nav>
+            </div>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 
