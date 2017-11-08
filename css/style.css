@@ -67,7 +67,7 @@ h1 a {
 }
 h1 a:hover {
     color: rgb(181, 18, 15);
-    text-shadow: 0 2px 3px rgba(22,22,22,0.75);
+    text-shadow: 0 1px 1px rgba(22,22,22,0.75);
     transition: 0.75s;
 }
 h1 a:hover i{
@@ -83,15 +83,15 @@ h1 a:hover i{
   }
   
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(1px, 0, 0);
   }
 
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
   }
 
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: translate3d(2px, 0, 0);
   }
 }
 
@@ -153,6 +153,9 @@ a:active {
 form {
     margin: 0 0 1.5em 0;
 }
+.login {
+    margin-top:5.5em;
+}
 
 fieldset {
     background: rgb(255, 255, 255);
@@ -165,6 +168,11 @@ fieldset {
 
 fieldset div {
     margin-bottom: 1em;
+    display: flex;
+  flex-flow: row wrap;
+}
+fieldset div > * {
+  flex: 1 2 0px;
 }
 
 legend {
@@ -174,8 +182,7 @@ legend {
 
 label {
     order: 1;
-    width: 10em;
-    padding-right: 0.5em;
+    padding-right: 1%;
 }
 
 /* right inline */
@@ -191,7 +198,6 @@ input,
 textarea,
 select {
     order: 2;
-    flex: 1 1 auto;
     border: 1px solid rgb(192, 192, 192);
      -webkit-border-radius: .25em;
     border-radius: .25em;
@@ -207,8 +213,6 @@ textarea:focus {
 }
 
 input {
-    display: block;
-    width: 96%;
 }
 textarea {
 }
@@ -402,7 +406,7 @@ footer nav a:active {
 
 .wrapper_default {
     flex: 1 0 auto;
-    margin: 0 1.5em;
+    margin: 0 2.5em;
 }
 
 /* Home aka splash page */
@@ -420,7 +424,7 @@ footer nav a:active {
 }
 
 .home header {
-    margin-top: 30%;
+    margin-top: 25%;
     text-align: center;
 }
 .choice {
@@ -510,14 +514,20 @@ all other screens
         align-items: center;
         margin-bottom: 1em;
     }
+    /*
     input {
         width: 50%;
     }
-
+    */
 }
 
 /* Desktop Styles */
 
 @media only screen and (min-width: 961px) {
     /* desktop only */
+    /*
+     input {
+        width: 50%;
+    }
+    */
 }
