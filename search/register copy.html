@@ -4,60 +4,54 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Online Blood Bank - Donor Register</title>
+    <title>Online Blood Bank - Searcher Registration</title>
     <meta name="author" content="Lynn kermode & Joshua Connor">
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 
 </head>
 
-<body class="donor">
-    <div class="wrapper_default">
+<body>
+    <div class="search default">
         <header>
-
-            <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>
+            <h1>Searcher Registration</h1>
 
         </header>
         <section>
             <article>
-                <h2>New Donor Registration</h2>
+                <h1>Search Form</h1>
+                <p>Enter the information below to search for blood in your area.</p>
+
                 <form action="" method="post">
+                    <!--
+        <fieldset>
+            <legend style="color:red;"><strong>LOG IN TO BEGIN YOUR SEARCH</strong></legend><br>
+            <!--Single-line text field
+            <label> User Name <input type="text" name="d_userName" id="form-d_userName"maxlength="20">
+	</label>
+            <label for="form-pswd">Password:
+            <input type="password" name="pswd" maxlength="8" id="form-pswd">
+            <br><br>
+	</label><br>-->
 
                     <fieldset>
-                        <legend>New Donor Login Information</legend>
-                        <p><em>Create a user name and password to register and receive a secure ID.</em></p>
-                        <div>
-                            <label>User Name</label>
-                            <input type="text" name="d_userName" id="form-d_userName" maxlength="20">
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="password" name="pswd" maxlength="8" id="form-pswd">
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>New Donor Contact</legend>
-                        <div>
-                            <label>First Name</label>
-                            <input type="text" name="d_fName" id="form-d_fName" maxlength="15">
+                        <legend style="color:blue;"><strong>REGISTER TO SEARCH</strong></legend>
+                        <p>Create a user name and password to register and receive a secure ID.
+                        </p>
 
-                        </div>
-                        <div>
-                            <label>Last Name </label>
-                            <input type="text" name="d_lName" id="form-d_lName" maxlength="20">
-                        </div>
-                        <div>
-                            <label>Street Address</label>
-                            <input type="text" name="d_stAdress" id="form-d_stAddress" maxlength="50">
-
-                        </div>
-                        <div>
-                            <label>City</label><input type="text" name="d_city" id="form-d_city" maxlength="50">
-                        </div>
-                        <div>
-                            <label>State</label>
+                        <label>User Name <input type="text" name="d_userName" id="form-d_userName"maxlength="20">Password</label>
+                        <input type="password" name="pswd" maxlength="8" id="form-pswd">
+                        <br><br>
+                        <label>First Name <input type="text" name="d_fName" id="form-d_fName" maxlength="15">
+	</label>
+                        <label>Last Name <input type="text" name="d_lName" id="form-d_lName" maxlength="20">
+	</label><br>
+                        <label>Street Address <input type="text" name="d_stAdress" id="form-d_stAddress"
+    maxlength="50">
+	</label>
+                        <label>City<input type="text" name="d_city" id="form-d_city" maxlength="50">
+	</label>
+                        <p>State
                             <select name="State">
 	<option value="AL">AL</option>
 	<option value="AK">AK</option>
@@ -111,12 +105,10 @@
 	<option value="WV">WV</option>
 	<option value="WY">WY</option>
     </select>
-                        </div>
-                        <div>
-                            <label>Postal Code</label><input type="text" name="d_postcode" id="form-d_postcode" maxlength="10">
-                        </div>
-                        <div>
-                            <label>Country</label>
+
+                            <label>Postal Code<input type="text" name="d_postcode" id="form-d_postcode" maxlength="10">
+                </label></p>
+                        <p>Country
                             <select>
     <option value="United States" title="United States">United States</option>           
 	<option value="Afghanistan" title="Afghanistan">Afghanistan</option>
@@ -369,39 +361,12 @@
 	<option value="Zambia" title="Zambia">Zambia</option>
 	<option value="Zimbabwe" title="Zimbabwe">Zimbabwe</option>
   </select>
-                        </div>
-                        <div>
+                        </p>
+                        <label>Email: <input type="text" name="email"></label><br>
+                        <label>Telephone: <input type="text" name="Tel"></label><br>
 
-                            <label>Email: </label><input type="email" name="email"></div>
-                        <div>
-                            <label>Telephone: </label><input type="tel" name="Tel">
-                        </div>
-                        <div>
-                            <label>Birthdate:</label><input type="date" min="17" name="age"></div>
-                        <p><em>You have to be at least 17 years old to donate blood.</em></p>
-                        <div>
-                            <label>Sex: </label>
-                            <select>
-                <option value="male">male</option>
-                <option value="female">female</option>
-                </select>
-                        </div>
-                        <div><label>Height: </label><input type="number" name="height"></div>
-                        <div><label>Weight: </label><input type="number" name="weight"></div>
-                        <div><label>Last donation date:</label><input type="date" name="name"></div>
-
-                        <div><label>What are you willing to donate?</label>
-                            <select>
-                <option value="Whole">Whole</option>
-                <option value="Power Red">Power Red</option>
-                <option value="Platelets">Platelets</option>
-                <option value="Plasma ">Plasma </option>
-                <option value="Autologous">Autologous</option>
-                <option value="Directed">Directed</option>
-                                   </select></div>
-                        <div>
-                            <label>Your blood type:</label>
-                            <select>
+                        <p>Search Blood type
+                            <Select>
                 <option value="A positive">A positive</option>
                 <option value="A negative">A negative</option>
                 <option value="B positive">B positive</option>
@@ -410,36 +375,48 @@
                 <option value="O negative">O negative</option>
                 <option value="AB positive">AB positive</option>
                 <option value="AB negative">AB negative</option>
+            </Select>
+                        </p>
+                        <p>Check Donor list for matching blood type</p>
 
-            </select></div>
-
+                        <p>Contact donor and send blood request</p>
+                        <fieldset>
+                            <!--Submit button-->
+                            <p><input type="submit" value="Submit"></p>
                         </fieldset>
-                    <div class="form_group_action">
-                        <button type="submit">Submit</button>
-                    </div>
+                        <br>
+                        <br>
+                        <fieldset>
+                            <legend>Didn't find what you needed? </legend>
+                            <p>We will notify you when your blood type becomes available in your area.<br> Please provide the following information.</p>
 
-                </form>
-                
-                
-                
+                            <ol>
+                                <li><label for="firstlast">Name:</label>
+                                    <input type="text" name="username" id="firstlast"></li>
+                                <li><label for="email">Email:</label>
+                                    <input type="text" name="email" id="email"></li>
+                            </ol>
+                            <input type="submit" value="Submit">
+                        </fieldset>
+                    </fieldset></form>
             </article>
         </section>
     </div>
- <footer class="sticky">
-    <div class="footer_column">
-    <div class="copyright">
-        <p>Copyright &copy; 2017, Online Blood Bank</p>    
-    </div>
-    <nav>
-        <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>    
-    </nav>
+    <footer class="sticky">
+        <div class="footer_column">
+            <div class="copyright">
+                <p>Copyright &copy; 2017, Online Blood Bank</p>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 
