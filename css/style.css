@@ -119,6 +119,7 @@ h6 {
 p {
     font-size: 1em;
     line-height: 1.8em;
+    
 }
 
 ul,
@@ -503,6 +504,12 @@ all other screens
 
 @media only screen and (max-width: 400px) {
     /* mobile only */
+    .wrapper_default {
+        margin: 0 3.5em;
+    }
+    form {
+        margin: 0 2em 1.5em 2em;
+    }
 }
 
 /* Tablet Styles */
@@ -513,6 +520,12 @@ all other screens
         display: flex;
         align-items: center;
         margin-bottom: 1em;
+    }
+    .wrapper_default {
+        margin: 0 4.5em;
+    }
+    form {
+        margin: 0 3em 1.5em 3em;
     }
     /*
     input {
@@ -525,6 +538,12 @@ all other screens
 
 @media only screen and (min-width: 961px) {
     /* desktop only */
+    .wrapper_default {
+        margin: 0 5.5em;
+    }
+    form {
+        margin: 0 4em 1.5em 4em;
+    }
     /*
      input {
         width: 50%;
