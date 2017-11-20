@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %} - Online Blood Bank</title>
+        <meta name="author" content="Lynn Kermode & Joshua Connor">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='normalize.css') }}">
+        <link rel=stylesheet type=text/css href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=stylesheet type=text/css href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_1.css') }}">
+        {% endblock %}
+    </head>
+    {% block bodyclass %}
+    <body>
+    {% endblock %}
+        <div class="wrapper_default">
+            <header>
+                <nav class="metanav">
+                    {% if not session.logged_in %}
+                        <a href="{{ url_for('login') }}">log in</a>
+                    {% else %}
+                        Signed in as: {{ name }} | 
+                        <a href="{{ url_for('logout') }}">log out</a>
+                    {% endif %}
+                </nav>
+                <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>  
+            </header>
+            <section>
+                <article>
+                    {% for message in get_flashed_messages() %}
+                        <div class=flash>{{ message }}</div>
+                    {% endfor %}
+                    {% block body %}
+                    {% endblock %}
+                </article>
+            </section>
+        </div>
+        
+        <footer class="sticky">
+            <div class="footer_column">
+                <div class="copyright">
+                    <p>Copyright &copy; 2017, Online Blood Bank</p>    
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>    
+                </nav>
+            </div>
+        </footer>
+
+        <script src="{{ url_for('static', filename='script_1.js') }}"></script>
+    </body>
+</html>
