@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block body %}
+    
+    {% if not session.logged_in %}
+    <h2>Login</h2>
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+    <form action="{{ url_for('donor') }}" method=post>
+        <fieldset>
+            <legend>Donor:</legend>
+            <div>
+                <label for="user">Username:</label>
+                <input type="text" name="username" id="user">
+            </div> 
+            <div>
+                <label for="pass">Password:</label>
+                <input type=password name=password id="pass">
+            </div>  
+        </fieldset>
+        <div class="form_group_action">
+            <button type="submit" value="Login">Sign In</button>
+        </div>   
+    </form>
+
+    <div class="signin-options">
+        <a href="{{ url_for('donor_register') }}">New User Registeration</a>
+        <a href="{{ url_for('forgot_password') }}">Forgot Password</a>
+    </div>
+
+  {% for message in get_flashed_messages() %}
+     <div class=flash>{{ message }}</div>
+  {% endfor %}
+
+  {% else %}
+    <h2>Donor Profile</h2>
+    <section class="user_stats">
+        <div>
+            You have donated<br>
+            SomeNumber X
+        </div>
+        <div>
+            You have active donor requests<br>
+            SomeNumber X
+        </div>
+    </section>
+    <!-- DONOR PROFILE GOES HERE! -->
+  {% endif %}
+
+{% endblock %}

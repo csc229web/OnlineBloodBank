@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Error 404</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+<p>Ooops. Something went horibly wrong and you ended up here.<br><a href="{{ url_for('index') }}">Back to the Homepage</a></p>
+{% endblock %}
