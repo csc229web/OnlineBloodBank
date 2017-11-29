@@ -179,9 +179,12 @@ fieldset div > * {
 fieldset .checkboxs {
     display: block;
 }
-fieldset .checkboxs div {
+fieldset .checkboxs .flex-checkbox {
     display: flex;
     flex-flow: row wrap;
+}
+fieldset .checkboxs .flex-checkbox div {
+    flex: auto;
 }
 fieldset .checkboxs div > * {
   flex: none;
