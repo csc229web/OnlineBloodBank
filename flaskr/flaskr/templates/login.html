@@ -3,12 +3,19 @@
   <h2>Login</h2>
   {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
   <form action="{{ url_for('login') }}" method=post>
-    <dl>
-      <dt>Username:
-      <dd><input type=text name=username>
-      <dt>Password:
-      <dd><input type=password name=password>
-      <dd><input type=submit value=Login>
-    </dl>
+    <fieldset>
+        <legend>Donor:</legend>
+        <div>
+            <label for="user">Username:</label>
+            <input type="text" name="username" id="user" required>
+        </div> 
+        <div>
+            <label for="pass">Password:</label>
+            <input type=password name=password id="pass" required>
+        </div>  
+    </fieldset>
+    <div class="form_group_action">
+        <button type="submit" value="Login">Sign In</button>
+    </div>
   </form>
 {% endblock %}

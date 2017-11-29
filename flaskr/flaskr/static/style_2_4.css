@@ -170,10 +170,21 @@ fieldset {
 fieldset div {
     margin-bottom: 1em;
     display: flex;
-  flex-flow: row wrap;
+    flex-flow: row wrap;
 }
 fieldset div > * {
   flex: 1 2 0px;
+}
+
+fieldset .checkboxs {
+    display: block;
+}
+fieldset .checkboxs div {
+    display: flex;
+    flex-flow: row wrap;
+}
+fieldset .checkboxs div > * {
+  flex: none;
 }
 
 legend {
@@ -184,6 +195,7 @@ legend {
 label {
     order: 1;
     padding-right: 1%;
+    align-items: baseline;
 }
 
 /* right inline */
@@ -216,6 +228,14 @@ textarea:focus {
 input {
 }
 textarea {
+}
+.checkboxs label {
+    order:1;
+}
+.checkboxs input[type='checkbox'] {
+    order:1;
+    margin-top:.3em;
+    margin-right:.5em;
 }
 
 ::-webkit-input-placeholder {
