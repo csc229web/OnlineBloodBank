@@ -18,7 +18,7 @@
             <header>
                 <nav class="metanav">
                     {% if not session.logged_in %}
-                        <a href="{{ url_for('login') }}">log in</a>
+                        <a href="{{ url_for('donor') }}">log in</a>
                     {% else %}
                         Signed in as: {{ name }} | 
                         <a href="{{ url_for('logout') }}">log out</a>
@@ -26,6 +26,7 @@
                 </nav>
                 <h1><a href="/"><i class="fa fa-tint" aria-hidden="true"></i> Online Blood Bank</a></h1>  
             </header>
+            
             <section>
                 <article>
                     {% for message in get_flashed_messages() %}
@@ -35,6 +36,7 @@
                     {% endblock %}
                 </article>
             </section>
+        
         </div>
         
         <footer class="sticky">

@@ -4,34 +4,24 @@
     {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
 
     {% if not session.logged_in %}
-    <form action="{{ url_for('login') }}" method=post>
-        <fieldset>
-            <legend>Donor:</legend>
-            <div>
-                <label for="user">Username:</label>
-                <input type="text" name="username" id="user">
-            </div> 
-            <div>
-                <label for="pass">Password:</label>
-                <input type=password name=password id="pass">
-            </div>  
-        </fieldset>
-        <div class="form_group_action">
-            <button type="submit" value="Login">Sign In</button>
-        </div>   
-    </form>
+        <h2>You're not logged in.</h2>
+        <div class="signin-options">
+            <a href="{{ url_for('donor') }}">Login</a>
+            <a href="{{ url_for('donor_register') }}">New User Registeration</a>
+        </div>
 
-    <div class="signin-options">
-        <a href="{{ url_for('donor_register') }}">New User Registeration</a>
-        <a href="{{ url_for('forgot_password') }}">Forgot Password</a>
-    </div>
+    {% else %}
 
-  {% for message in get_flashed_messages() %}
-     <div class=flash>{{ message }}</div>
-  {% endfor %}
+        <h2>Welcome Someone</h2>
+        <ul>
+        {% for donor in donor_login %}
+            <li>{{ donor.donor_id }}</li>
+            <li>{{ donor.donor_username }}</li>
+        {% else %}
+        
+            <li><em>Unbelievable.  No entries here so far</em>
+        {% endfor %}
+        </ul>
 
-  {% else %}
-  <!-- DONOR PROFILE GOES HERE! -->
-  {% endif %}
-
+    {% endif %}
 {% endblock %}

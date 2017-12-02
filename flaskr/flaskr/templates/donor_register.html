@@ -16,6 +16,7 @@
                 <input type="password" name="donor_password" id="donor_password" required>
             </div>
         </fieldset>
+       
         <fieldset>
             <legend>New Donor Contact Information</legend>
             <div>
@@ -35,6 +36,8 @@
                 <input type="tel" name="donor_telephone" id="donor_telephone" required>
             </div>
         </fieldset>
+        
+        <!-- 
         <fieldset>
             <legend>New Donor Address Information</legend>
             <div>
@@ -406,13 +409,10 @@
                 </select>
             </div>
         </fieldset>
+-->
         <div class="form_group_action">
             <button type="submit">Submit</button>
         </div>
     </form>
-
-    {% for message in get_flashed_messages() %}
-        <div class=flash>{{ message }}</div>
-    {% endfor %}
 
 {% endblock %}
