@@ -12,16 +12,38 @@
 
     {% else %}
 
-        <h2>Welcome Someone</h2>
-        <ul>
-        {% for donor in donor_login %}
-            <li>{{ donor.donor_id }}</li>
-            <li>{{ donor.donor_username }}</li>
+        <h2>All Donor Profiles</h2>
+        
+        {% for dl in donor_login %}
+        <div class="flex-wrapper">
+            <div>ID: <strong>{{ dl.donor_id }}</strong></div>
+            <div>User: <strong>{{ dl.donor_username }}</strong></div>
+            <div>First Name: <strong>{{ dl.donor_firstname }}</strong></div>
+            <div>Last Name: <strong>{{ dl.donor_lastname }}</strong></div>
+            <div>Email: <strong>{{ dl.donor_email }}</strong></div>
+            <div>Tel: <strong>{{ dl.donor_telephone }}</strong></div>
+            <div>Street Address: <strong>{{ dl.donor_address_street }}</strong></div>
+            <div>Street Address: <strong>{{ dl.donor_address_street_opt }}</strong></div>
+            <div>City: <strong>{{ dl.donor_address_city }}</strong></div>
+            <div>State: <strong>{{ dl.donor_address_state }}</strong></div>
+            <div>Postal: <strong>{{ dl.donor_address_postalcode }}</strong></div>
+            <div>Country: <strong>{{ dl.donor_address_country }}</strong></div>
+            <div>Birthdate: <strong>{{ dl.donor_birthdate }}</strong></div>
+            <div>Born Gender: <strong>{{ dl.donor_gender }}</strong></div>
+            <div>Height: <strong>{{ dl.donor_height }}</strong></div>
+            <div>Weight: <strong>{{ dl.donor_weight }}</strong></div>
+            <div>Have you ever donated blood before? <strong>{{ dl.donor_history }}</strong></div>
+            <div>Donation Date: <strong>{{ dl.donor_history_date }}</strong></div>
+            <div>Donate declined? <strong>{{ dl.donor_history_reason }}</strong></div>
+            <div>Donation Participation? <strong>{{ dl.donor_participation }}</strong></div>
+            <div>Bloodtype: <strong>{{ dl.donor_bloodtype }}</strong></div>
+        </div>
+        <hr class="divider">
         {% else %}
         
-            <li><em>Unbelievable.  No entries here so far</em>
+        <p><em>Unbelievable.  No entries here so far</em></p>
         {% endfor %}
-        </ul>
+        
 
     {% endif %}
 {% endblock %}

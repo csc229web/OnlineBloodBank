@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h2>Donor Profile</h2>
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    {% if not session.logged_in %}
+        <h2>You're not logged in.</h2>
+        <div class="signin-options">
+            <a href="{{ url_for('donor') }}">Login</a>
+            <a href="{{ url_for('donor_register') }}">New User Registeration</a>
+        </div>
+
+    {% else %}
+
+        <h2>All Donor Profiles</h2>
+        
+        {% for dl in donor_login %}
+        <div class="flex-wrapper-search">
+            <div>Bloodtype: <strong>{{ dl.donor_bloodtype }}</strong></div>
+            <div>User: <strong>{{ dl.donor_username }}</strong></div>
+            <div>Donation Participation? <strong>{{ dl.donor_participation }}</strong></div>
+            <div>ID: <strong>{{ dl.donor_id }}</strong></div>
+        </div>
+        <hr class="divider">
+        {% else %}
+        
+        <p><em>Unbelievable.  No entries here so far</em></p>
+        {% endfor %}
+        
+
+    {% endif %}
+{% endblock %}

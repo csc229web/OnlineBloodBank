@@ -8,7 +8,7 @@
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='normalize.css') }}">
         <link rel=stylesheet type=text/css href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel=stylesheet type=text/css href="https://fonts.googleapis.com/css?family=Crimson+Text|Ubuntu">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_2_5.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_2_9.css') }}">
         {% endblock %}
     </head>
     {% block bodyclass %}
@@ -46,9 +46,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>    
                 </nav>
             </div>
