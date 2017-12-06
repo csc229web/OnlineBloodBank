@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}Search{% endblock %}
+{% block body %}
+    
+    {% if not session.logged_in %}
+    <h2>Donor Search</h2>
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    <p>You are not logged in.</p>
+    {% else %}
+
+    <form action="{{ url_for('search') }}" method=post>
+        <fieldset>
+            <legend>Donor Search:</legend>
+            
+            <div>
+                <label for="donor_bloodtype">Your blood type:</label>
+                <select name="donor_bloodtype" id="donor_bloodtype">
+                    <option selected disabled>Choose One</option>
+                    <option value="A positive">A positive</option>
+                    <option value="A negative">A negative</option>
+                    <option value="B positive">B positive</option>
+                    <option value="B negative">B negative </option>
+                    <option value="O positive">O positive</option>
+                    <option value="O negative">O negative</option>
+                    <option value="AB positive">AB positive</option>
+                    <option value="AB negative">AB negative</option>
+                </select>
+            </div>  
+        </fieldset>
+        <div class="form_group_action">
+            <button type="submit" value="Search">Search</button>
+        </div>   
+    </form>
+    
+
+
+
+
+  {% endif %}
+
+{% endblock %}

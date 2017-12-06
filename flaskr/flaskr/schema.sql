@@ -1,6 +1,25 @@
-drop table if exists entries;
-create table entries (
-  id integer primary key autoincrement,
-  title text not null,
-  'text' text not null
+drop table if exists donor_login;
+create table donor_login (
+    donor_id integer primary key autoincrement,
+    donor_username text not null,
+    donor_password text,
+    donor_firstname text not null,
+    donor_lastname text,
+    donor_email text,
+    donor_telephone text,
+    donor_address_street text,
+    donor_address_street_opt text,
+    donor_address_city text,
+    donor_address_state text,
+    donor_address_postalcode integer,
+    donor_address_country text,
+    donor_birthdate date,
+    donor_gender text,
+    donor_height float,
+    donor_weight float,
+    donor_history text,
+    donor_history_date date,
+    donor_history_reason text,
+    donor_participation text,
+    donor_bloodtype text
 );

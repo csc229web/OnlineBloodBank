@@ -3,7 +3,9 @@
     <h2>New Donor Registration</h2>
     {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
 
-    <form action="{{ url_for('donor_register') }}" method=post>
+    <form action="{{ url_for('donor_register') }}" onsubmit="return validateForm()" method=post name="donor">
+        
+        
         <fieldset>
             <legend>New Donor Login Information</legend>
             <p><em>Create a user name and password to register and receive a secure ID.</em></p>
@@ -16,6 +18,7 @@
                 <input type="password" name="donor_password" id="donor_password" required>
             </div>
         </fieldset>
+       
         <fieldset>
             <legend>New Donor Contact Information</legend>
             <div>
@@ -35,6 +38,8 @@
                 <input type="tel" name="donor_telephone" id="donor_telephone" required>
             </div>
         </fieldset>
+        
+        
         <fieldset>
             <legend>New Donor Address Information</legend>
             <div>
@@ -47,11 +52,11 @@
             </div>
             <div>
                 <label for="donor_address_city">City</label>
-                <input type="text" name="donor_address_city" id="donor_address_city">
+                <input type="text" name="donor_address_city" id="donor_address_city" required>
             </div>
             <div>
                 <label for="donor_address_state">State/Province/Region</label>
-                <input type="text" name="donor_address_state" id="donor_address_state">
+                <input type="text" name="donor_address_state" id="donor_address_state" required>
             </div>
             <div>
                 <label for="donor_address_postalcode">Postal Code</label>
@@ -312,11 +317,12 @@
                 </select>
             </div>
         </fieldset>
+        
         <fieldset>
             <legend>New Donor Personal Information</legend>
             <div>
                 <label for="donor_birthdate">Birthdate:</label>
-                <input type="date" name="donor_birthdate" id="" required>
+                <input type="date" name="donor_birthdate" id="">
                 <p><em>You have to be at least 17 years old to donate blood.</em></p>
             </div>
             <div>
@@ -337,10 +343,11 @@
                 <input type="number" name="donor_weight" id="donor_weight" placeholder="Kilogram Only">
             </div>
         </fieldset>
+        
         <fieldset>
             <legend>New Donor Donation History</legend>
             <div>
-                <label for="donor_history_donated">Have you ever donated blood before? </label>
+                <label for="donor_history">Have you ever donated blood before? </label>
                 <select name="donor_history" id="donor_history">
                     <option selected disabled>Choose One</option>
                     <option value="Yes">Yes</option>
@@ -352,7 +359,7 @@
                 <input type="date" name="donor_history_date" id="donor_history_date">
             </div>
             <div>
-                <label for="donor_history_reason">If there any reason you cannot donate? </label>
+                <label for="donor_history_reason">Is there any reason you can not donate? </label>
                 <select name="donor_history_reason" id="donor_history_reason">
                     <option selected disabled>Choose One</option>
                     <option value="Yes">Yes</option>
@@ -360,8 +367,10 @@
                 </select>
             </div>
         </fieldset>
+        
         <fieldset>
             <legend>New Donor Donation Participation</legend>
+
             <div class="checkboxs">
                 <p>What are you willing to donate?</p>
                 <div class="flex-checkbox">
@@ -391,6 +400,7 @@
                     </div>
                 </div>
             </div>
+
             <div>
                 <label for="donor_bloodtype">Your blood type:</label>
                 <select name="donor_bloodtype" id="donor_bloodtype">
@@ -405,14 +415,12 @@
                     <option value="AB negative">AB negative</option>
                 </select>
             </div>
+            
         </fieldset>
+
         <div class="form_group_action">
             <button type="submit">Submit</button>
         </div>
     </form>
-
-    {% for message in get_flashed_messages() %}
-        <div class=flash>{{ message }}</div>
-    {% endfor %}
 
 {% endblock %}

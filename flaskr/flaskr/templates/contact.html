@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+
+<h2>Contact Us</h2>
+<form>
+    <fieldset>
+        <legend>Your Contact Info:</legend>
+        <div>
+        <label for="name">Your Name: </label>
+        <input type="text" name="fullname" placeholder="First & Last">
+        </div>
+        <div>
+        <label for="email">Your Email: </label>
+        <input type="email" name="email" placeholder="you@somedomain.com">
+        </div>
+        <div>
+        <label for="tel">Your Phone: </label>
+        <input type="tel" name="tel" placeholder="111-222-3333">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Details:</legend>
+        <textarea placeholder="Support details:"></textarea>
+        <br>
+    </fieldset>
+    <div class="form_group_action">
+        <button type="submit">Send</button>
+    </div>
+</form>
+
+{% endblock %}
